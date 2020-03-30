@@ -192,9 +192,10 @@ function makeTiles () {
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
     mySprite.startEffect(effects.bubbles, 500)
     music.baDing.play()
+    mySprite.say(":)", 1000)
+    pause(1000)
     valEng = 90
     imgEng.fillRect(0, 0, valEng, 8, 7)
-    mySprite.say(":)", 1000)
     catPosChg()
 })
 function reverse (tile: number) {
